@@ -1,0 +1,9 @@
+.widgets {
+    flex: 0.2;
+}
+
+.widgets > img {
+    width: 95%;
+    border-radius: 10px;
+    margin: 5px;
+}
