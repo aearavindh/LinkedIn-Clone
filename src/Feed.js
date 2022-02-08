@@ -13,10 +13,14 @@ import InputOption from "./InputOption";
 import Post from "./Post";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 
 function Feed() {
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
+
+  const user = useSelector(selectUser);
 
   useEffect(() => {
     db.collection("posts")
@@ -35,11 +39,10 @@ function Feed() {
     e.preventDefault();
 
     db.collection("posts").add({
-      name: "AE Aravindh",
-      description: "Software Engineer",
+      name: user.displayName,
+      description: user.email,
       message: input,
-      photoUrl:
-        "https://media-exp1.licdn.com/dms/image/C5603AQEOpwdWjTRq8Q/profile-displayphoto-shrink_400_400/0/1615721046640?e=1649894400&v=beta&t=5xFFzddYj9H4JUfzXQ-34H-6sWFlsyO64on_lIqF2II",
+      photoUrl: user.photoURL,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
 
