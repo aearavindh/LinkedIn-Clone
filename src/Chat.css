@@ -1,0 +1,86 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-left: 1.5px outset lightgray;
+}
+
+.chat__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1.5px outset lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.chat__headerLeft,
+.chat__headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+}
+
+.chat__headerLeft > h5 {
+  font-weight: 600;
+  padding-left: 8px;
+}
+
+.chat__headerRight > .MuiSvgIcon-root {
+  padding: 10px;
+  color: gray;
+}
+
+.chat__body {
+  animation: fade 3s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.chat__search {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  margin: 8px 12px;
+  border-radius: 5px;
+  background-color: #eef3f8;
+}
+
+.chat__search > input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.chat__search > .MuiSvgIcon-root {
+  color: gray;
+}

@@ -1,0 +1,36 @@
+.roomInfo {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+}
+
+.roomInfo__left {
+  flex: 0.15;
+}
+
+.roomInfo:hover {
+  background-color: whitesmoke;
+}
+
+.roomInfo__center {
+  flex: 0.67;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.roomInfo__center > h6 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+  color: gray;
+}
+
+.roomInfo__right {
+  flex: 0.18;
+}

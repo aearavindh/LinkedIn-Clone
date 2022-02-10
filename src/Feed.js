@@ -58,6 +58,7 @@ function Feed() {
           <form>
             <input
               value={input}
+              placeholder="Start a post"
               onChange={(e) => setInput(e.target.value)}
               type="text"
             />

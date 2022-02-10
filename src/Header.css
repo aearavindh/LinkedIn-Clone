@@ -5,14 +5,15 @@
     background-color: white;
     justify-content: space-evenly;
     border-bottom: 0.1px solid lightgray;
-    padding-top: 10px;
-    padding-bottom: 10px;
     width: 100%;
     z-index: 999;
 }
 
 .header__left {
+    flex: 0.4;
     display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .header__left > img {
@@ -22,12 +23,14 @@
 }
 
 .header__search {
-    padding: 10px;
+    padding: 10px 10px 10px;
     display: flex;
     align-items: center;
-    height: 22px;
+    height: 20px;
     color: gray;
     background-color: #eef3f8;
+    border-radius: 5px;
+    width: 50%;
 }
 
 .header__search > input {
@@ -37,5 +40,25 @@
 }
 
 .header__right {
+    flex: 0.45;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding-top: 10px;
+}
+
+.header__rightCorner {
+    flex: 0.15;
     display: flex;
+    justify-content: center;
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.header__rightCorner > p {
+    color: #915907;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: pre-wrap;
 }
