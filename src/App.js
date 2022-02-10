@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import Feed from "./Feed";
 import Widgets from "./Widgets";
 import Login from "./Login";
+import Chat from "./Chat";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
@@ -42,6 +43,7 @@ function App() {
           <Widgets />
         </div>
       )}
+      {user && <Chat />}
     </div>
   );
 }

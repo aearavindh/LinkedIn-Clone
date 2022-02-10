@@ -12,6 +12,7 @@ import {
 import { useDispatch } from "react-redux";
 import { logout } from "./features/userSlice";
 import { auth } from "./firebase";
+import {CgMenuGridR} from "react-icons/cg";
 
 function Header() {
   const dispatch = useDispatch();
@@ -34,16 +35,21 @@ function Header() {
         </div>
       </div>
       <div className="header__right">
-        <HeaderOption Icon={Home} title="Home" />
+        <HeaderOption Icon={Home} title="Home" active />
         <HeaderOption Icon={SupervisorAccount} title="My Network" />
         <HeaderOption Icon={BusinessCenter} title="Jobs" />
         <HeaderOption Icon={Chat} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notifications" />
         <HeaderOption
-          avatar={true}
+          arrow
+          avatar
           title="Me"
           onClick={logoutOfApp}
         />
+      </div>
+      <div className="header__rightCorner">
+        <HeaderOption Icon={CgMenuGridR} title="Work" arrow />
+          <p>{`Try Premium for \n free`}</p>
       </div>
     </div>
   );
