@@ -25,7 +25,8 @@
   font-weight: 400;
 }
 
-p {
+.roomInfo__center > p,
+.roomInfo__right > p {
   font-size: 12px;
   font-weight: 400;
   color: gray;
